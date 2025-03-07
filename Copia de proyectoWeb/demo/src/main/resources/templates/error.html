@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" th:href="@{/css/stylesError.css}">
+</head>
+<body>
+<div class="error-container">
+    <h1>¡Ups! Algo salió mal.</h1>
+    <p th:text="${mensaje}">Ocurrió un error inesperado.</p>
+    <a th:href="@{/}">Volver al inicio</a>
+</div>
+</body>
+</html>

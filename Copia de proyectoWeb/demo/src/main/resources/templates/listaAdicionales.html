@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Adicionales</title>
+    <link rel="stylesheet" th:href="@{/css/adicionales.css}">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <h1>Lista de Adicionales</h1>
+        <a th:href="@{/admin/adicionales/nuevo}" class="btn">Agregar Adicional</a>
+    </div>
+</header>
+
+<main class="container">
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="adicional : ${adicionales}">
+            <td th:text="${adicional.id}"></td>
+            <td th:text="${adicional.nombre}"></td>
+            <td th:text="'$' + ${adicional.precio} + ' COP'"></td>
+            <td>
+                <a th:href="@{/admin/adicionales/editar/{id}(id=${adicional.id})}" class="btn">Editar</a>
+                <a th:href="@{/admin/adicionales/eliminar/{id}(id=${adicional.id})}" class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+
+</body>
+</html>

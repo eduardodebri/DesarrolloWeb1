@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Hanami</title>
+    <link rel="stylesheet" th:href="@{/css/adminStyles.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <h1 class="admin-title">Panel de Administración</h1>
+        <nav class="nav-links">
+            <a th:href="@{/admin/productos/}">Productos</a>
+            <a th:href="@{/admin/adicionales/}">Adicionales</a>
+            <a th:href="@{/admin/operadores}">Operadores</a>
+            <a th:href="@{/logout}" class="logout-button">Cerrar Sesión</a>
+        </nav>
+    </div>
+</header>
+
+<!-- SECCIÓN PRINCIPAL -->
+<main class="admin-container">
+    <h2>Bienvenido, Administrador</h2>
+    <p>Seleccione una categoría para administrar:</p>
+
+    <div class="admin-grid">
+        <a th:href="@{/admin/productos/}" class="admin-card">
+            <img src="/Images/sushi.png" alt="Productos">
+            <h3>Productos</h3>
+        </a>
+
+        <a th:href="@{/admin/adicionales/}" class="admin-card">
+            <img src="/Images/extra.png" alt="Adicionales">
+            <h3>Adicionales</h3>
+        </a>
+
+        <a th:href="@{/admin/operadores}" class="admin-card">
+            <img src="/Images/serviciocliente.png" alt="Operadores">
+            <h3>Operadores</h3>
+        </a>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2025 Hanami - Panel de Administración</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Añadir Producto</title>
+  <link rel="stylesheet" th:href="@{/css/agregarProducto.css}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poltawski+Nowy:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>AÑADIR PRODUCTO</h1>
+    <nav>
+      <a th:href="@{/admin/productos/}">Volver a la lista</a>
+    </nav>
+  </div>
+</header>
+
+<section class="form-container">
+  <h2>Nuevo Producto</h2>
+  <form th:action="@{/admin/productos/guardar}" method="post" th:object="${producto}">
+
+    <label >Nombre:</label>
+    <input th:type="text"  th:field="*{nombre}" required>
+
+    <label >Descripción:</label>
+    <textarea th:type="text" th:field="*{descripcion}" required></textarea>
+
+    <label >Precio:</label>
+    <input type="number"  th:field="*{precio}" step="0.01" required>
+
+    <label >Imagen URL:</label>
+    <input type="text" th:field="*{imagenUrl}" placeholder="Ej: /Images/sushi.jpg">
+
+    <button type="submit">Añadir Producto</button>
+  </form>
+</section>
+
+</body>
+</html>

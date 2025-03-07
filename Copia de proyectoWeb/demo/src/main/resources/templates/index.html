@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanami Restaurante</title>
+
+    <!-- Cargar CSS -->
+    <link rel="stylesheet" th:href="@{/css/styles2.css}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lily+Script+One&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <img id="rosaLogo" th:src="@{/Images/rosaLogo.png}" alt="rosaLogo">
+        <img id="nombreLogo" th:src="@{/Images/nombreLogo.png}" alt="nombrelogo">
+        <nav class="nav-links">
+            <a class="linksHeader" th:href="@{/cliente/login}">Iniciar Sesion</a>
+            <a class="linksHeader" th:href="@{#bienvenidaContainer}">Acerca de</a>
+            <a class="linksHeader" th:href="@{#contactos}">Contacto</a>
+            <a th:href="@{/hanami/productos/}" class="menu-button">Menú</a>
+        </nav>
+    </div>
+</header>
+
+<!-- SECCIÓN INICIO -->
+<section id="inicio" th:style="'background-image: url(' + @{/Images/fondoInicioNuevo.jpg} + ');'">
+    <img th:src="@{/Images/LogoDef.png}" alt="logoRestaurante" id="logoRestaurante">
+    <h1 id="tituloRestaurante">RESTAURANTE</h1>
+    <p class="parrafoBienvenida">Más que sushi</p>
+    <p class="parrafoBienvenida">Una obra de arte culinaria</p>
+    <div id="linea1"></div>
+    <div id="linea2"></div>
+</section>
+
+<section id="sombraInicio"></section>
+
+<!-- SECCIÓN ACERCA DE -->
+<h2 id="titulo_acerca_de">Acerca De</h2>
+<section id="bienvenidaContainer">
+    <img id="sushi1" th:src="@{/Images/Sushis7.jpg}" alt="sushiImagen">
+    <img id="sushi2" th:src="@{/Images/Sushi3.jpeg}" alt="sushiImagen">
+    <h1 class="typografia">Bienvenido</h1>
+    <div id="contenedorDescripcion">
+        <p>
+            <br><br><br><br>
+            Bienvenido a el santuario del sushi, donde cada rollo es una obra maestra culinaria y cada bocado te transporta al corazón de Japón.
+            En Hanami, celebramos la tradición y la innovación del sushi. Imagina la destreza de nuestros sushiman creando delicadas piezas de nigiri, joyas de frescura que se deshacen en tu boca y revelan los sabores más puros del océano. <br><br><br>
+            Disfruta de la explosión de color y sabor de nuestros makis, desde los clásicos California hasta creaciones de autor, cada uno con ingredientes selectos y salsas artesanales.
+            Hanami es más que un restaurante: es un destino para los amantes del sushi. Un lugar donde la calidad y la pasión por el detalle se encuentran en cada pieza. Más que una comida, es un momento para compartir con amigos y familiares.
+            ¡Explora nuestra carta y descubre la diversidad de rollos, nigiris y sashimis! En Hanami Sushi, te esperamos con los brazos abiertos y el auténtico sabor de Japón en cada bocado. <br>
+        </p>
+    </div>
+    <button id="botonConoceMas">Conoce Más</button>
+</section>
+
+<!-- SECCIÓN MENÚ (SIN PRODUCTOS) -->
+<section id="menu">
+    <h2 id="tituloMenu">Nuestro Menú</h2>
+    <div id="linea3"></div>
+    <div id="linea4"></div>
+
+    <section id="fondoPlatos">
+        <!-- Aquí se pueden agregar los productos dinámicamente -->
+    </section>
+
+    <button id="botonExploraMenu">Explora El Menú</button>
+</section>
+
+<!-- SECCIÓN CONTACTOS -->
+<section id="contactos">
+    <h2>Hanami</h2>
+    <img class="logoFooter" th:src="@{/icons/instagram (1).png}" alt="iconoInstagram">
+    <img class="logoFooter" th:src="@{/icons/facebook.png}" alt="iconoFacebook">
+    <img class="logoFooter" th:src="@{/icons/twitter.png}" alt="iconoTwitter">
+    <img class="logoFooter" th:src="@{/icons/youtube.png}" alt="iconoYouTube">
+    <p id="tituloRestauranteContactos">RESTAURANTE</p>
+    <p id="localizacionContactos">
+        <samp>Localización</samp><br>
+        Chapinero <br>
+        Bogotá D.C.
+    </p>
+    <p id="info_contactos">
+        <samp>Contáctanos</samp><br>
+        +57 111 222 333 <br>
+        hanamiSushi@example.com
+    </p>
+</section>
+
+<img id="imagenSeccionContactos" th:src="@{/Images/dondoContactos2.jpg}" alt="imagencontactos">
+
+<!-- FOOTER -->
+<footer>
+    <p> copyright &copy; 2025 Hanami</p>
+</footer>
+
+<!-- Cargar Script -->
+<script th:src="@{/JS/script.js}" defer></script>
+
+</body>
+</html>

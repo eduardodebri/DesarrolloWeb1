@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Productos</title>
+    <link rel="stylesheet" th:href="@{/css/styles4.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <h1>ADMINISTRAR PRODUCTOS</h1>
+        <a th:href="@{/admin/productos/agregar}" class="edit-btn">Agregar Producto</a>
+
+    </div>
+</header>
+
+<section class="product-list">
+    <h2>Lista de Productos</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="producto : ${productos}">
+            <td th:text="${producto.nombre}"></td>
+            <td th:text="${producto.descripcion}"></td>
+            <td th:text="'$ ' + ${producto.precio} + ' COP'"></td>
+            <td><img th:src="${producto.imagenUrl}" alt="Imagen Producto" width="100"></td>
+            <td>
+                <a th:href="@{/admin/productos/editar/{id}(id=${producto.id})}" class="edit-btn">Editar</a>
+                <a th:href="@{/admin/productos/eliminar/{id}(id=${producto.id})}" class="delete-btn" onclick="return confirm('¿Seguro que deseas eliminar este producto?')">Eliminar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a th:href="@{/admin}" class="editr-btn">Menú Admin</a>
+
+</section>
+
+</body>
+</html>

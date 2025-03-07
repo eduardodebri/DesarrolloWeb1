@@ -1,0 +1,146 @@
+body {
+    font-family: "Poltawski Nowy", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.crud-container {
+    width: 50%;
+    margin: 20px auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.crud-container h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background: gold;
+    color: black;
+}
+
+.product-list {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.product-list h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.product-img {
+    width: 60px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.edit-btn {
+    background: gold;
+    color: black;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: black;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+.editr-btn {
+    display: block; /* Para que podamos centrarlo con margin auto */
+    margin: 20px auto; /* Margin con separación arriba y centrado horizontalmente */
+    text-align: center; /* Centra el texto dentro del botón */
+    padding: 10px 20px; /* Añade espacio interno al botón */
+    background-color: #007bff; /* Color de fondo (azul) */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Cambia el cursor a mano al pasar el puntero por encima */
+}
+
+.editr-btn:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el puntero */
+    text-decoration: underline; /* Subrayado en hover */
+}

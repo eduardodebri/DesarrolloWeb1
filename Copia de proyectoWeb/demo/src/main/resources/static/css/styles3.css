@@ -1,0 +1,150 @@
+/* General */
+body {
+    overflow-x: hidden;
+    font-family: "Poltawski Nowy", serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+/* HEADER */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+}
+
+#rosaLogo {
+    width: 60px;
+    height: 60px;
+}
+
+#nombreLogo {
+    width: 120px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.linksHeader, .menu-button {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-button {
+    padding: 5px 15px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+
+.menu-button:hover {
+    background-color: gold;
+    color: white;
+}
+
+/* SECCIÓN DESCRIPCIÓN PRODUCTO */
+#container_descripcion_producto {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+#fondoRestauranteDescripcion {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#sombraBlanca {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 2;
+}
+
+/* IMAGEN PRODUCTO */
+#imagenProducto {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 150px;
+    position: relative;
+    z-index: 3;
+}
+
+/* DESCRIPCIÓN PRODUCTO */
+#descripcionProducto {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px auto;
+    position: relative;
+    z-index: 4;
+}
+
+#anadirAlCarrito {
+    width: 40px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#descripcionProducto h2 {
+    font-size: 28px;
+    color: gold;
+}
+
+#descripcionProducto p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+samp {
+    font-weight: bold;
+    color: gold;
+}
+
+/* SECCIÓN CONTACTOS */
+#contactos {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    text-align: center;
+}
+
+.logoFooter {
+    width: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.logoFooter:hover {
+    transform: scale(1.2);
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}

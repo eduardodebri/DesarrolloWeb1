@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Adicional</title>
+    <link rel="stylesheet" th:href="@{/css/editar_adicional.css}">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <h1>Editar Adicional</h1>
+        <nav>
+            <a th:href="@{/admin/adicionales/}">Volver a la lista</a>
+        </nav>
+    </div>
+</header>
+
+<section class="edit-container">
+    <h2>Editar Adicional</h2>
+    <form th:action="@{/admin/adicionales/guardar}" method="post" th:object="${adicional}">
+        <input type="hidden" th:field="*{id}">
+
+        <label>Nombre:</label>
+        <input type="text" th:field="*{nombre}" required>
+
+        <label>Precio:</label>
+        <input type="number" th:field="*{precio}" step="0.01" required>
+
+        <button type="submit" class="save-btn">Guardar Cambios</button>
+    </form>
+</section>
+
+</body>
+</html>

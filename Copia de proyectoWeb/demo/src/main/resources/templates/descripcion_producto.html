@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="'Descripción de ' + ${producto.nombre}"></title>
+    <link rel="stylesheet" th:href="@{/css/styles3.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poltawski+Nowy:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lily+Script+One&family=Poltawski+Nowy:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <img id="rosaLogo" th:src="@{/Images/rosaLogo.png}" alt="rosaLogo">
+        <a th:href="@{/hanami}">
+            <img id="nombreLogo" th:src="@{/Images/nombreLogo.png}" alt="nombreLogo">
+        </a>
+        <nav class="nav-links">
+            <a class="linksHeader" th:href="@{/hanami}">Inicio</a>
+            <a class="linksHeader" th:href="@{#bienvenidaContainer}">Acerca de</a>
+            <a class="linksHeader" th:href="@{#contactos}">Contacto</a>
+            <a th:href="@{/hanami/productos}" class="menu-button">Menú</a>
+        </nav>
+    </div>
+</header>
+
+<!-- SECCIÓN DETALLE PRODUCTO -->
+<section id="container_descripcion_producto">
+    <img id="fondoRestauranteDescripcion" th:src="@{/Images/fondoInicioNuevo.jpg}" alt="fondo">
+    <div id="sombraBlanca"></div>
+    <img id="imagenProducto" th:src="@{/Images/{img}(img=${producto.imagenUrl})}" th:alt="${producto.nombre}">
+    <div id="descripcionProducto">
+        <a th:href="@{/hanami/productos/agregar/{id}(id=${producto.id})}">
+            <img id="anadirAlCarrito" th:src="@{/icons/anadir-al-carrito.png}" alt="Añadir al carrito">
+        </a>
+        <h2 id="tituloProducto" th:text="${producto.nombre}"></h2>
+        <p id="parrfoDescripcionProducto" th:text="${producto.descripcion}"></p>
+        <p><samp>Precio:</samp> <span th:text="'$ ' + ${producto.precio} + ' COP'"></span></p>
+
+        <div id="adicionalesProducto">
+            <h3>Adicionales disponibles:</h3>
+            <ul>
+                <li th:each="adicional : ${producto.adicionales}" th:text="${adicional.nombre} + ' - $' + ${adicional.precio} + ' COP'"></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- SECCIÓN CONTACTOS -->
+<section id="contactos">
+    <h2>Hanami</h2>
+    <img class="logoFooter" th:src="@{/icons/instagram (1).png}" alt="Instagram">
+    <img class="logoFooter" th:src="@{/icons/facebook.png}" alt="Facebook">
+    <img class="logoFooter" th:src="@{/icons/twitter.png}" alt="Twitter">
+    <img class="logoFooter" th:src="@{/icons/youtube.png}" alt="YouTube">
+    <p id="tituloRestauranteContactos">RESTAURANTE</p>
+    <p id="localizacionContactos">
+        <samp>Localización</samp><br>Chapinero, Bogotá D.C.
+    </p>
+    <p id="info_contactos">
+        <samp>Contáctanos</samp><br>+57 111 222 333 <br>hanamiSushi@example.com
+    </p>
+</section>
+
+<img id="imagenSeccionContactos" th:src="@{/Images/dondoContactos2.jpg}" alt="Imagen de contactos">
+
+<footer>
+    <p>copyright &copy; 2025 Hanami</p>
+</footer>
+</body>
+</html>
+
