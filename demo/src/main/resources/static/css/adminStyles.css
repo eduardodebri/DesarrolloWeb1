@@ -1,0 +1,131 @@
+/* --- ESTILO GENERAL --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Poltawski Nowy", sans-serif;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.admin-container {
+    flex-grow: 1;
+}
+
+/* --- HEADER --- */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 15px 40px;
+}
+
+.admin-title {
+    color: white;
+    font-size: 28px;
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: gold;
+    color: black;
+}
+
+/* --- BOTÓN DE CIERRE DE SESIÓN --- */
+.logout-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid red;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: red;
+    color: white;
+}
+
+/* --- SECCIÓN PRINCIPAL --- */
+.admin-container {
+    margin-top: 50px;
+}
+
+.admin-container h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.admin-container p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* --- GRID DE OPCIONES --- */
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+/* --- TARJETAS DE OPCIONES --- */
+.admin-card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: black;
+}
+
+.admin-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.admin-card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+/* --- EFECTOS HOVER --- */
+.admin-card:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- FOOTER --- */
+footer {
+    margin-top: auto;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}

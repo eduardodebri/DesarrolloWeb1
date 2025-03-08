@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Adicional</title>
+    <link rel="stylesheet" th:href="@{/css/adicionales.css}">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <h1>Formulario Adicional</h1>
+        <a href="/admin/adicionales/" class="btn">Volver</a>
+    </div>
+</header>
+
+<main class="container">
+    <form th:action="@{/admin/adicionales/guardar}" th:object="${adicional}" method="post">
+        <input type="hidden" th:field="*{id}">
+
+        <label>Nombre:</label>
+        <input type="text" th:field="*{nombre}" required>
+
+        <label>Precio:</label>
+        <input type="number" th:field="*{precio}" step="0.01" required>
+
+        <button type="submit">Guardar</button>
+    </form>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Adicionales</title>
+    <link rel="stylesheet" th:href="@{/css/adicionales.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <h1>ADMINISTRAR ADICIONALES</h1>
+        <div class="header-buttons">
+            <a th:href="@{/admin}" class="admin-menu-btn">Menú Admin</a>
+            <a th:href="@{/estadisticas}" class="header-btn">Estadísticas</a>
+            <a th:href="@{/domiciliarios}" class="header-btn">Domiciliarios</a>
+            <a th:href="@{/operadores}" class="header-btn">Operadores</a>
+            <a th:href="@{/productos}" class="header-btn">Productos</a>
+            <a th:href="@{/logout}" class="logout-btn">Cerrar Sesión</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <h2>Lista de Adicionales</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="adicional : ${adicionales}">
+            <td th:text="${adicional.id}"></td>
+            <td th:text="${adicional.nombre}"></td>
+            <td th:text="'$' + ${adicional.precio} + ' COP'"></td>
+            <td>
+                <a th:href="@{/admin/adicionales/editar/{id}(id=${adicional.id})}" class="edit-btn">Editar</a>
+                <a th:href="@{/admin/adicionales/eliminar/{id}(id=${adicional.id})}" class="delete-btn" onclick="return confirm('¿Seguro que deseas eliminar este adicional?')">Eliminar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="add-product-container">
+        <a th:href="@{/admin/adicionales/nuevo}" class="add-product-btn">Añadir Adicional</a>
+    </div>
+</main>
+
+</body>
+</html>

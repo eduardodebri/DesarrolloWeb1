@@ -1,0 +1,166 @@
+/* --- ESTILO GENERAL --- */
+body {
+    font-family: "Poltawski Nowy", sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- ENCABEZADO --- */
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+/* --- BOTONES DEL ENCABEZADO --- */
+.admin-menu-btn, .header-btn, .logout-btn {
+    background-color: transparent;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.header-btn:hover, .admin-menu-btn:hover {
+    background: gold;
+    color: black;
+}
+
+/* --- BOTÓN DE CERRAR SESIÓN --- */
+.logout-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid red;
+}
+
+.logout-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.container, .product-list {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- TABLA --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* --- CABECERA DE LA TABLA --- */
+table thead {
+    background-color: black;
+    color: white;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* --- FILAS INTERCALADAS --- */
+.even-row {
+    background-color: white;
+}
+
+.odd-row {
+    background-color: #f0f0f0;
+}
+
+/* --- IMAGEN DE PRODUCTO --- */
+.product-img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* --- BOTONES DE ACCIÓN (EDITAR Y ELIMINAR) --- */
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.edit-btn {
+    background: transparent;
+    color: black;
+    border: 2px solid gold;
+}
+
+.delete-btn {
+    background: transparent;
+    color: red;
+    border: 2px solid red;
+}
+
+.edit-btn:hover {
+    background: gold;
+    color: black;
+}
+
+.delete-btn:hover {
+    background: red;
+    color: white;
+}
+
+/* --- BOTÓN AÑADIR PRODUCTO/ADICIONAL --- */
+.add-product-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.add-product-btn {
+    padding: 8px 15px;
+    background-color: transparent;
+    color: black;
+    border: 2px solid gold;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.add-product-btn:hover {
+    background-color: gold;
+    color: black;
+}

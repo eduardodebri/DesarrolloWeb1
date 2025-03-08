@@ -1,0 +1,52 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8d7da; /* Color de fondo de error */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor del mensaje de error */
+.error-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Título */
+.error-container h1 {
+    color: #721c24;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Mensaje */
+.error-container p {
+    color: #721c24;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Botón de regreso */
+.error-container a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #dc3545; /* Rojo Bootstrap */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.error-container a:hover {
+    background-color: #c82333; /* Rojo oscuro */
+}
