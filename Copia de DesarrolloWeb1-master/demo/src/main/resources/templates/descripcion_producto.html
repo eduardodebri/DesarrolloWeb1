@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="'Descripción de ' + ${producto.nombre}"></title>
+    <link rel="stylesheet" th:href="@{/css/styles3.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poltawski+Nowy:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <a th:href="@{/hanami}">
+            <img id="nombreLogo" th:src="@{/Images/nombreLogo.png}" alt="nombreLogo">
+        </a>
+        <nav class="nav-links">
+            <a class="linksHeader" th:href="@{/hanami}">Inicio</a>
+            <a class="linksHeader" th:href="@{/hanami/productos/}">Menu</a>
+            <a th:href="@{/cliente/login}" class="menu-button">Iniciar Sesion</a>
+        </nav>
+    </div>
+</header>
+
+<!-- SECCIÓN DETALLE PRODUCTO -->
+<section id="container_descripcion_producto">
+    <div class="detalle-container">
+        <!-- Imagen del Producto -->
+        <div class="producto-imagen">
+            <img th:src="@{/Images/{img}(img=${producto.imagenUrl})}" th:alt="${producto.nombre}">
+        </div>
+
+        <!-- Descripción y adicionales -->
+        <div class="producto-info">
+            <h2 th:text="${producto.nombre}"></h2>
+            <p th:text="${producto.descripcion}"></p>
+            <p class="precio"><strong>Precio:</strong> <span th:text="'$ ' + ${producto.precio} + ' COP'"></span></p>
+
+            <!-- Adicionales -->
+            <div id="adicionalesProducto">
+                <h3>Adicionales disponibles:</h3>
+                <ul>
+                    <li th:each="adicional : ${producto.adicionales}">
+                        <input type="checkbox" th:id="'adicional' + ${adicional.id}" th:value="${adicional.id}">
+                        <label th:for="'adicional' + ${adicional.id}" th:text="${adicional.nombre} + ' - $' + ${adicional.precio} + ' COP'"></label>
+                    </li>
+                </ul>
+            </div>
+
+            <button id="anadirCarrito">Añadir al carrito</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>copyright &copy; 2025 Hanami</p>
+</footer>
+
+
+</body>
+</html>

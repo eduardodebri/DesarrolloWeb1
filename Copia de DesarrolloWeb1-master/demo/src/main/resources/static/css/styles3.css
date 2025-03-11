@@ -1,0 +1,113 @@
+/* HEADER */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos uniformemente */
+    align-items: center;
+    background: black;
+    padding: 10px 30px;
+    width: 100vw; /* Ocupa el ancho completo de la pantalla */
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+    box-sizing: border-box; /* Asegura que padding no afecte el tamaño total */
+}
+
+#nombreLogo {
+    width: 150px;
+    height: auto;
+    max-height: 100px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 30px;
+}
+
+.linksHeader, .menu-button {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu-button {
+    padding: 8px 20px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.menu-button:hover {
+    background-color: gold;
+    color: white;
+}
+
+
+/* SECCIÓN DESCRIPCIÓN PRODUCTO */
+#container_descripcion_producto {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* CONTENEDOR GENERAL */
+.detalle-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* IMAGEN DEL PRODUCTO */
+.producto-imagen img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+/* INFO DEL PRODUCTO */
+.producto-info {
+    max-width: 400px;
+}
+
+.producto-info h2 {
+    font-size: 28px;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.producto-info p {
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* PRECIO */
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: gold;
+}
+
+/* FOOTER */
+footer {
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto en blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Espaciado arriba y abajo */
+    font-size: 25px;
+    height: 135px;/* Tamaño del texto más grande */
+    width: 100vw; /* Asegura que ocupe todo el ancho */
+    position: relative; /* Mantiene la estructura */
+    bottom: 0;
+    left: -10px;
+
+}

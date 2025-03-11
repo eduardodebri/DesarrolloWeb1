@@ -1,0 +1,147 @@
+*stylesLogOn.css*
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Poltawski+Nowy:ital@1&display=swap');
+
+body {
+    font-family: "Poltawski Nowy", serif;
+    font-style: italic;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.login-image {
+    flex: 1;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(100%);
+    position: relative;
+}
+
+.login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.logo-overlay {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.logo-overlay img {
+    width: 500px;
+    height: auto;
+    mix-blend-mode: normal;
+    filter: none;
+}
+
+.login-container {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    position: relative;
+}
+
+.volver-btn-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.volver-btn-container img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.volver-btn-container span {
+    font-family: "Poltawski Nowy", serif;
+    font-style: italic;
+    font-size: 18px;
+    color: gold;
+}
+
+h1 {
+    font-family: "Lily Script One", cursive;
+    color: gold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: gold;
+    color: black;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.crear-cuenta {
+    font-weight: bold;
+}
