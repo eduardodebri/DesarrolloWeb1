@@ -1,59 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poltawski+Nowy:wght@400;700&display=swap');
-
 body {
-    font-family: "Poltawski Nowy", serif;
-    background-color: #f8f8f8;
+    font-family: "Poltawski Nowy", sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: white;
+    color: black;
 }
 
-/* --- HEADER --- */
 header {
-    width: 100%;
     background-color: black;
     color: white;
-    padding: 15px;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    padding: 20px;
+    text-align: center;
 }
 
 .header-container h1 {
-    font-family: "Bebas Neue", cursive;
-    font-size: 28px;
     margin: 0;
-}
-
-nav {
-    display: flex;
-    gap: 15px;
+    font-size: 24px;
 }
 
 nav a {
     color: gold;
     text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
+    color: white;
+}
+
+.crud-container {
+    width: 50%;
+    margin: 20px auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.crud-container h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
     background: gold;
     color: black;
 }
 
-/* --- BOTÓN DE CERRAR SESIÓN --- */
-.logout-btn {
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.header-buttons a {
     background-color: transparent;
     color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.header-buttons a:hover {
+    background: gold;
+    color: black;
+}
+
+.admin-menu-btn {
+    background-color: transparent;
+}
+
+.header-btn {
+    background-color: transparent;
+}
+
+.logout-btn {
+    background-color: transparent;
     border: 2px solid red;
 }
 
@@ -62,12 +115,11 @@ nav a:hover {
     color: white;
 }
 
-/* --- CONTENEDOR PRINCIPAL (SPLIT SCREEN) --- */
 .split-screen {
     display: flex;
     width: 90%;
     max-width: 1200px;
-    margin-top: 20px;
+    margin: 20px auto; /* Center the split-screen container */
     height: auto;
     transition: width 0.3s ease-in-out;
 }
@@ -78,9 +130,9 @@ nav a:hover {
 
 .split-screen .additional-panel.collapsed + .form-container {
     width: 100%; /* Full width when panel is collapsed */
+    margin: 0 auto; /* Center the form container */
 }
 
-/* --- FORMULARIO DE PRODUCTO (IZQUIERDA) --- */
 .form-container {
     background: white;
     padding: 30px;
@@ -94,49 +146,6 @@ nav a:hover {
     width: 100%;
 }
 
-h2 {
-    text-align: center;
-    color: black;
-    font-family: "Bebas Neue", cursive;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-input, textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-}
-
-/* --- BOTONES (Mismo estilo que antes) --- */
-button {
-    background-color: black;
-    color: white;
-    padding: 10px 15px;
-    border: 2px solid gold;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
-}
-
-button:hover {
-    background-color: gold;
-    color: black;
-}
-
-/* --- PANEL DE ADICIONALES (DERECHA) --- */
 .additional-panel {
     background: white;
     border-radius: 10px;
@@ -149,13 +158,11 @@ button:hover {
     transition: width 0.3s ease-in-out;
 }
 
-/* --- ESTILO CUANDO ESTÁ COLAPSADO --- */
 .additional-panel.collapsed {
     width: 0; /* Collapse to zero width */
     padding: 0; /* Remove padding */
 }
 
-/* --- BOTÓN DESPLEGABLE (BARRA PEGADA A LA DERECHA) --- */
 .toggle-btn {
     position: absolute;
     right: -50px;
@@ -182,7 +189,6 @@ button:hover {
     width: 30px;
 }
 
-/* --- CONTENIDO DEL PANEL DE ADICIONALES --- */
 .additional-content {
     display: flex;
     flex-direction: column;
@@ -212,6 +218,10 @@ button:hover {
     display: flex;
     align-items: center;
     gap: 10px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .adicional-item input[type="checkbox"] {
@@ -224,7 +234,56 @@ button:hover {
     color: #333;
 }
 
-/* --- RESPONSIVE DESIGN --- */
+.additional-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.additional-content ul li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.additional-content ul li span {
+    font-size: 16px;
+    color: #333;
+}
+
+.additional-content ul li a {
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.additional-content ul li a:hover {
+    color: darkred;
+}
+
+.additional-panel.collapsed .additional-content {
+    display: none;
+}
+
+.split-screen .form-container {
+    width: 100%; /* Full width when panel is collapsed */
+}
+
+.split-screen .additional-panel.collapsed + .form-container {
+    width: 100%; /* Full width when panel is collapsed */
+    margin: 0 auto; /* Center the form container */
+}
+
+.additional-panel.collapsed .toggle-btn {
+    right: 0; /* Move to the right when collapsed */
+}
+
 @media (max-width: 1024px) {
     .split-screen {
         flex-direction: column;
@@ -249,10 +308,6 @@ button:hover {
         right: 0;
         height: 60px;
         width: 50px;
-    }
-
-    .additional-panel.collapsed .toggle-btn {
-        right: 0; /* Move to the right when collapsed */
     }
 
     .additional-content {

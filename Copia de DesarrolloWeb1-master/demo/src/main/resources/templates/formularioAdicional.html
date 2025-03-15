@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Adicional</title>
-    <link rel="stylesheet" th:href="@{/css/adicionales.css}">
+    <title>Panel Añadir Adicionales</title>
+    <link rel="stylesheet" th:href="@{/css/stylesAnadirAdicionales.css}">
 </head>
 <body>
 
 <header>
     <div class="header-container">
-        <h1>Formulario Adicional</h1>
-        <a href="/admin/adicionales/" class="btn">Volver</a>
+        <h1>Panel Añadir Adicionales</h1>
+        <nav>
+            <a href="/admin/adicionales/" class="header-btn">Volver</a>
+        </nav>
     </div>
 </header>
 
@@ -25,7 +27,7 @@
         <label>Precio:</label>
         <input type="number" th:field="*{precio}" step="0.01" required>
 
-        <button type="submit">Guardar</button>
+        <button type="submit" class="add-product-btn">Guardar</button>
     </form>
 </main>
 

@@ -42,7 +42,7 @@
             <td th:text="${producto.nombre}"></td>
             <td th:text="${producto.descripcion}"></td>
             <td th:text="'$ ' + ${producto.precio} + ' COP'"></td>
-            <td><img th:src="${producto.imagenUrl}" alt="Imagen Producto" class="product-img"></td>
+            <td><img th:src="@{/Images/{filename}(filename=${producto.imagenUrl})}" alt="Imagen del producto" class="product-img"></td>
             <td>
                 <a th:href="@{/admin/productos/editar/{id}(id=${producto.id})}" class="edit-btn">Editar</a>
                 <a th:href="@{/admin/productos/eliminar/{id}(id=${producto.id})}" class="delete-btn" onclick="return confirm('¿Seguro que deseas eliminar este producto?')">Eliminar</a>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Producto</title>
-    <link rel="stylesheet" th:href="@{/css/styles5.css}">
+    <link rel="stylesheet" th:href="@{/css/stylesEditarProducto.css}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
@@ -13,60 +13,89 @@
 
 <header>
     <div class="header-container">
-        <h1>EDITAR PRODUCTO</h1>
-        <nav>
-            <a th:href="@{/hanami/admin/productos/}">Volver a la lista</a>
-        </nav>
+        <h1>ADMINISTRAR ADICIONALES</h1>
+        <div class="header-buttons">
+            <a th:href="@{/admin}" class="admin-menu-btn">Menú Admin</a>
+            <a th:href="@{/estadisticas}" class="header-btn">Estadísticas</a>
+            <a th:href="@{/domiciliarios}" class="header-btn">Domiciliarios</a>
+            <a th:href="@{/operadores}" class="header-btn">Operadores</a>
+            <a th:href="@{/productos}" class="header-btn">Productos</a>
+            <a th:href="@{/logout}" class="logout-btn">Cerrar Sesión</a>
+        </div>
     </div>
 </header>
 
-<section class="crud-container">
-    <h2>Editar Producto</h2>
-    <form th:action="@{/admin/productos/guardar}" th:object="${producto}" method="post">
-        <input type="hidden" th:field="*{id}">
+<section class="split-screen">
+    <div class="form-container">
+        <h2>Editar Producto</h2>
+        <form th:action="@{/admin/productos/guardar}" th:object="${producto}" method="post">
+            <input type="hidden" th:field="*{id}">
 
-        <label>Nombre:</label>
-        <input type="text" th:field="*{nombre}" required>
+            <label>Nombre:</label>
+            <input type="text" th:field="*{nombre}" required>
 
-        <label>Descripción:</label>
-        <textarea th:field="*{descripcion}" required></textarea>
+            <label>Descripción:</label>
+            <textarea th:field="*{descripcion}" required></textarea>
 
-        <label>Precio:</label>
-        <input type="number" th:field="*{precio}" step="0.01" required>
+            <label>Precio:</label>
+            <input type="number" th:field="*{precio}" step="0.01" required>
 
-        <label>Imagen URL:</label>
-        <input type="text" th:field="*{imagenUrl}" placeholder="Ej: /Images/sushi.jpg">
+            <label>Imagen URL:</label>
+            <input type="text" th:field="*{imagenUrl}" placeholder="Ej: /Images/sushi.jpg">
 
-        <button type="submit">Actualizar Producto</button>
-    </form>
+            <button type="submit">Actualizar Producto</button>
+        </form>
+    </div>
 
-    <!-- 📌 SECCIÓN PARA AGREGAR ADICIONALES -->
-    <h2>Agregar Adicionales</h2>
-    <form th:action="@{/admin/productos/{productoId}/agregar-adicional(productoId=${producto.id})}" method="post">
-        <label for="adicional">Seleccionar Adicional:</label>
-        <select id="adicional" name="adicionalId">
-            <option th:each="adicional : ${adicionales}"
-                    th:value="${adicional.id}"
-                    th:text="${adicional.nombre}">
-            </option>
-        </select>
-        <button type="submit">Añadir Adicional</button>
-    </form>
+    <div class="additional-panel">
+        <button class="toggle-btn" onclick="togglePanel()">
+            <img src="/icons/hiden.png" alt="mostrar/ocultar">
+        </button>
 
+        <div class="additional-content">
+            <h2>Agregar Adicionales</h2>
+            <form th:action="@{/admin/productos/{productoId}/agregar-adicional(productoId=${producto.id})}" method="post">
+                <label for="adicional">Seleccionar Adicional:</label>
+                <select id="adicional" name="adicionalId">
+                    <option th:each="adicional : ${adicionales}"
+                            th:value="${adicional.id}"
+                            th:text="${adicional.nombre}">
+                    </option>
+                </select>
+                <button type="submit">Añadir Adicional</button>
+            </form>
 
-    <!-- 📌 LISTA DE ADICIONALES ASIGNADOS -->
-    <h2>Adicionales asignados</h2>
-    <ul>
-        <li th:each="adicional : ${producto.adicionales}">
-            <span th:text="${adicional.nombre}"></span>
-            <a th:href="@{/admin/productos/{productoId}/remover-adicional/{adicionalId}(productoId=${producto.id}, adicionalId=${adicional.id})}"
-               onclick="return confirm('¿Seguro que deseas eliminar este adicional?')">
-                ❌
-            </a>
-        </li>
-    </ul>
-
+            <h2>Adicionales asignados</h2>
+            <ul>
+                <li th:each="adicional : ${producto.adicionales}">
+                    <span th:text="${adicional.nombre}"></span>
+                    <a th:href="@{/admin/productos/{productoId}/remover-adicional/{adicionalId}(productoId=${producto.id}, adicionalId=${adicional.id})}"
+                       onclick="return confirm('¿Seguro que deseas eliminar este adicional?')">
+                        ❌
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </section>
+
+<script>
+    function togglePanel() {
+        const panel = document.querySelector('.additional-panel');
+        const formContainer = document.querySelector('.form-container');
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const additionalContent = document.querySelector('.additional-content');
+        panel.classList.toggle('collapsed');
+        additionalContent.style.display = panel.classList.contains('collapsed') ? 'none' : 'flex';
+        if (panel.classList.contains('collapsed')) {
+            formContainer.style.width = '100%';
+            toggleBtn.style.right = '0';
+        } else {
+            formContainer.style.width = 'calc(100% - 50px)';
+            toggleBtn.style.right = '-50px';
+        }
+    }
+</script>
 
 </body>
 </html>
