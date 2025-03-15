@@ -7,13 +7,15 @@
     <link rel="stylesheet" th:href="@{/css/styles3.css}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poltawski+Nowy:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lily+Script+One&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <!-- HEADER -->
 <header>
     <div class="header-container">
+        <img id="rosaLogo" th:src="@{/Images/rosaLogo.png}" alt="rosaLogo">
         <a th:href="@{/hanami}">
             <img id="nombreLogo" th:src="@{/Images/nombreLogo.png}" alt="nombreLogo">
         </a>
@@ -26,6 +28,7 @@
 </header>
 
 <!-- SECCIÓN DETALLE PRODUCTO -->
+<img id="fondoRestauranteDescripcion" src="/Images/fondoInicioNuevo.jpg" alt="fondoRestaurante">
 <section id="container_descripcion_producto">
     <div class="detalle-container">
         <!-- Imagen del Producto -->
@@ -36,8 +39,8 @@
         <!-- Descripción y adicionales -->
         <div class="producto-info">
             <h2 th:text="${producto.nombre}"></h2>
-            <p th:text="${producto.descripcion}"></p>
-            <p class="precio"><strong>Precio:</strong> <span th:text="'$ ' + ${producto.precio} + ' COP'"></span></p>
+            <p id="textoDescripcion" th:text="${producto.descripcion}"></p>
+            <p class="precioTexto"><strong>Precio:</strong> <span th:text="'$ ' + ${producto.precio} + ' COP'"></span></p>
 
             <!-- Adicionales -->
             <div id="adicionalesProducto">
@@ -55,6 +58,26 @@
     </div>
 </section>
 
+<section id="contactos">
+    <h2>Hanami</h2>
+    <img class="logoFooter" th:src="@{/icons/instagram (1).png}" alt="iconoInstagram">
+    <img class="logoFooter" th:src="@{/icons/facebook.png}" alt="iconoFacebook">
+    <img class="logoFooter" th:src="@{/icons/twitter.png}" alt="iconoTwitter">
+    <img class="logoFooter" th:src="@{/icons/youtube.png}" alt="iconoYouTube">
+
+    <p id="tituloRestauranteContactos">RESTAURANTE</p>
+    <p id="localizacionContactos">
+        <samp class="sampContacto">Localización</samp><br>
+        Chapinero <br>
+        Bogotá D.C.
+    </p>
+    <p id="info_contactos">
+        <samp class="sampContacto">Contáctanos</samp><br>
+        +57 111 222 333 <br>
+        hanamiSushi@example.com
+    </p>
+    <img id="imagenSeccionContactos" th:src="@{/Images/dondoContactos2.jpg}" alt="imagencontactos">
+</section>
 
 <!-- FOOTER -->
 <footer>
