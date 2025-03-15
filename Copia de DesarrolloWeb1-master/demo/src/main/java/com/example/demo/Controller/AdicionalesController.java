@@ -46,6 +46,9 @@ public class AdicionalesController {
         }
         return "redirect:/error"; // Si no se encuentra el cliente
     }
+    public List<AdicionalesModel> listarAdicionales(List<Long> ids) {
+        return adicionalService.obtenerAdicionales();
+    }
 
     @PostMapping("/guardar")
     public String guardarAdicional(@ModelAttribute AdicionalesModel adicional) {

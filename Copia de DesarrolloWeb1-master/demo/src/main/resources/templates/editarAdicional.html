@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Adicional</title>
-    <link rel="stylesheet" th:href="@{/css/editar_adicional.css}">
+    <link rel="stylesheet" th:href="@{/css/editarAdicionalStyles.css}">
 </head>
 <body>
 
 <header>
     <div class="header-container">
-        <h1>Editar Adicional</h1>
-        <nav>
-            <a th:href="@{/admin/adicionales/}">Volver a la lista</a>
-        </nav>
+        <h1>ADMINISTRAR ADICIONALES</h1>
+        <div class="header-buttons">
+            <a th:href="@{/admin}" class="admin-menu-btn">Menú Admin</a>
+            <a th:href="@{/estadisticas}" class="header-btn">Estadísticas</a>
+            <a th:href="@{/domiciliarios}" class="header-btn">Domiciliarios</a>
+            <a th:href="@{/operadores}" class="header-btn">Operadores</a>
+            <a th:href="@{/productos}" class="header-btn">Productos</a>
+            <a th:href="@{/logout}" class="logout-btn">Cerrar Sesión</a>
+        </div>
     </div>
 </header>
 

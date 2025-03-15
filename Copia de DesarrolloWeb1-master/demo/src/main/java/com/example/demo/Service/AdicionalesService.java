@@ -41,28 +41,7 @@ public class AdicionalesService {
         adicionalesRepository.deleteById(id);
     }
 
-    @PostConstruct
-    public void init() {
-
-            List<AdicionalesModel> adicionales = Arrays.asList(
-                    new AdicionalesModel("Salsa Teriyaki", 5000.0),
-                    new AdicionalesModel("Salsa de Anguila", 6000.0),
-                    new AdicionalesModel("Salsa Spicy Mayo", 4500.0),
-                    new AdicionalesModel("Salsa Ponzu", 5500.0),
-                    new AdicionalesModel("Jengibre Encurtido", 3000.0),
-                    new AdicionalesModel("Wasabi Extra", 2500.0),
-                    new AdicionalesModel("Aguacate", 7000.0),
-                    new AdicionalesModel("Pepino", 5000.0),
-                    new AdicionalesModel("Cebollín", 4000.0),
-                    new AdicionalesModel("Queso Crema", 8000.0),
-                    new AdicionalesModel("Tobiko (Huevas de pescado)", 12000.0),
-                    new AdicionalesModel("Camaron Tempura", 10000.0),
-                    new AdicionalesModel("Alga Nori Extra", 3500.0),
-                    new AdicionalesModel("Arroz Adicional", 5000.0),
-                    new AdicionalesModel("Sésamo Tostado", 4000.0)
-            );
-            adicionalesRepository.saveAll(adicionales);
-        }
+    
     }
 
 

@@ -107,16 +107,20 @@ table th, table td {
     width: 80px;
     height: auto;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 /* --- BOTONES DE ACCIÓN (EDITAR Y ELIMINAR) --- */
 .edit-btn, .delete-btn {
-    padding: 5px 10px;
+    padding: 6px 8px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     border: 2px solid transparent;
     transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+    min-width: 70px; /* Evita que se encojan demasiado */
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el borde no cambie el tamaño total */
 }
 
 .edit-btn {
@@ -141,7 +145,16 @@ table th, table td {
     color: white;
 }
 
-/* --- BOTÓN AÑADIR PRODUCTO/ADICIONAL --- */
+/* --- HACER RESPONSIVE LA CELDA DE BOTONES --- */
+td:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Espacio entre botones */
+    flex-wrap: nowrap; /* Evita que se apilen */
+}
+
+/* --- BOTÓN AÑADIR PRODUCTO --- */
 .add-product-container {
     display: flex;
     justify-content: flex-end;
@@ -163,4 +176,60 @@ table th, table td {
 .add-product-btn:hover {
     background-color: gold;
     color: black;
+}
+
+/* --- HACER RESPONSIVE EL HEADER Y LOS BOTONES --- */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-buttons {
+        width: 100%;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .admin-menu-btn, .header-btn, .logout-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* --- HACER RESPONSIVE LA TABLA Y LOS BOTONES DE ACCIÓN --- */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    .product-img {
+        width: 60px;
+        height: auto;
+    }
+
+    /* Mantener los botones en línea sin que se apilen */
+    td:last-child {
+        flex-wrap: nowrap;
+        gap: 5px;
+    }
+
+    /* Reducir tamaño de botones en pantallas más pequeñas */
+    .edit-btn, .delete-btn {
+        padding: 4px 6px;
+        font-size: 12px;
+        min-width: 60px;
+    }
+}
+
+/* --- HACER RESPONSIVE EL BOTÓN DE AÑADIR PRODUCTO --- */
+@media (max-width: 480px) {
+    .add-product-container {
+        justify-content: center;
+    }
+
+    .add-product-btn {
+        width: 100%;
+        text-align: center;
+    }
 }

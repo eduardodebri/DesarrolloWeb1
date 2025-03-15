@@ -16,29 +16,73 @@
     <h1>AÑADIR PRODUCTO</h1>
     <nav>
       <a th:href="@{/admin/productos/}">Volver a la lista</a>
+      <a th:href="@{/logout}" class="logout-btn">Cerrar Sesión</a>
     </nav>
   </div>
 </header>
 
-<section class="form-container">
-  <h2>Nuevo Producto</h2>
-  <form th:action="@{/admin/productos/guardar}" method="post" th:object="${producto}">
+<!-- Contenedor principal de la pantalla partida -->
+<section class="split-screen">
+  
+  <!-- Formulario de producto -->
+  <div class="form-container">
+    <h2>Nuevo Producto</h2>
+    <form th:action="@{/admin/productos/guardar}" method="post" th:object="${producto}">
+      <label>Nombre:</label>
+      <input type="text" th:field="*{nombre}" required>
 
-    <label >Nombre:</label>
-    <input th:type="text"  th:field="*{nombre}" required>
+      <label>Descripción:</label>
+      <textarea th:field="*{descripcion}" required></textarea>
 
-    <label >Descripción:</label>
-    <textarea th:type="text" th:field="*{descripcion}" required></textarea>
+      <label>Precio:</label>
+      <input type="number" th:field="*{precio}" step="0.01" required>
 
-    <label >Precio:</label>
-    <input type="number"  th:field="*{precio}" step="0.01" required>
+      <label>Imagen URL:</label>
+      <input type="text" th:field="*{imagenUrl}" placeholder="Ej: /Images/sushi.jpg">
 
-    <label >Imagen URL:</label>
-    <input type="text" th:field="*{imagenUrl}" placeholder="Ej: /Images/sushi.jpg">
+      <button type="submit">Añadir Producto</button>
+    </form>
+  </div>
 
-    <button type="submit">Añadir Producto</button>
-  </form>
+  <!-- Panel de adicionales (inicialmente oculto) -->
+  <div class="additional-panel">
+    <button class="toggle-btn" onclick="togglePanel()">
+      <img src="/icons/hiden.png" alt="mostrar/ocultar">
+    </button>
+
+    <div class="additional-content">
+      <h2>Adicionales Disponibles</h2>
+      <form th:action="@{/admin/productos/agregar-adicional}" method="post">
+        <div class="adicionales-list">
+          <div th:each="adicional : ${adicionales}" class="adicional-item">
+            <input type="checkbox" th:id="'adicional' + ${adicional.id}" th:name="adicionales" th:value="${adicional.id}">
+            <label th:for="'adicional' + ${adicional.id}" th:text="${adicional.nombre} + ' - $' + ${adicional.precio} + ' COP'"></label>
+          </div>
+        </div>
+        <button type="submit">Confirmar adicionales</button>
+      </form>
+    </div>
+  </div>
+
 </section>
+
+<script>
+  function togglePanel() {
+    const panel = document.querySelector('.additional-panel');
+    const formContainer = document.querySelector('.form-container');
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const additionalContent = document.querySelector('.additional-content');
+    panel.classList.toggle('collapsed');
+    additionalContent.style.display = panel.classList.contains('collapsed') ? 'none' : 'flex';
+    if (panel.classList.contains('collapsed')) {
+      formContainer.style.width = '100%';
+      toggleBtn.style.right = '0';
+    } else {
+      formContainer.style.width = 'calc(100% - 50px)';
+      toggleBtn.style.right = '-50px';
+    }
+  }
+</script>
 
 </body>
 </html>

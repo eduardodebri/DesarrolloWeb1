@@ -1,0 +1,110 @@
+/* --- ESTILO GENERAL --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Poltawski Nowy", sans-serif;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex-grow: 1;
+}
+
+/* --- ENCABEZADO --- */
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 15px 5%; /* Ajustado el padding */
+    width: 90%; /* Aumentado el tamaño del contenedor */
+    margin: 0 auto; /* Centrado el contenedor */
+}
+
+.header-container h1 {
+    color: white;
+    font-size: 28px;
+    margin: 0;
+}
+
+.header-container nav {
+    position: static; /* Cambiado a static */
+    margin-left: auto; /* Añadido para empujar el nav a la derecha */
+}
+
+/* --- BOTÓN VOLVER --- */
+.header-btn {
+    background-color: transparent;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.header-btn:hover {
+    background: gold;
+    color: black;
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #ffffff;
+    color: black;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- FOOTER --- */
+footer {
+    margin-top: auto;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}

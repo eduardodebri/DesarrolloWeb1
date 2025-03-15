@@ -1,0 +1,79 @@
+/* --- ESTILO GENERAL --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Poltawski Nowy", sans-serif;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex-grow: 1;
+}
+
+/* --- ENCABEZADO --- */
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 15px 40px;
+}
+
+.header-container h1 {
+    color: white;
+    font-size: 28px;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.admin-menu-btn, .header-btn, .logout-btn {
+    background-color: transparent;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.header-btn:hover, .admin-menu-btn:hover {
+    background: gold;
+    color: black;
+}
+
+.logout-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid red;
+}
+
+.logout-btn:hover {
+    background-color: red;
+    color: white;
+}
