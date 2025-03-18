@@ -1,0 +1,4 @@
+2025-03-18 09:19:22.284803-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * [*]FROMADICIONALES"
+Syntax error in SQL statement "SELECT * [*]FROMADICIONALES"; SQL statement:
+SELECT * FROMADICIONALES [42000-224]

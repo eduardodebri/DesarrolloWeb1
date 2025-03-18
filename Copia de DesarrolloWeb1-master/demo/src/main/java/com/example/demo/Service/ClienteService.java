@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ClienteService {
+public class ClienteService implements ClienteServiceInterface {
 
     private final ClienteRepository clienteRepository;
 

@@ -4,6 +4,7 @@ import com.example.demo.Model.AdicionalesModel;
 import com.example.demo.Model.ClienteModel;
 import com.example.demo.Repository.AdicionalesRepository;
 import com.example.demo.Service.AdicionalesService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -14,14 +15,12 @@ import java.util.Optional;
 @Controller
 @RequestMapping("/admin/adicionales")
 public class AdicionalesController {
+    @Autowired
+    private  AdicionalesService adicionalService;
+    @Autowired
+    private  AdicionalesService adicionalesService;
 
-    private final AdicionalesService adicionalService;
-    private final AdicionalesService adicionalesService;
 
-    public AdicionalesController(AdicionalesService adicionalService, AdicionalesService adicionalesService) {
-        this.adicionalService = adicionalService;
-        this.adicionalesService = adicionalesService;
-    }
 
     // Listar todos los adicionales
     @GetMapping("/")

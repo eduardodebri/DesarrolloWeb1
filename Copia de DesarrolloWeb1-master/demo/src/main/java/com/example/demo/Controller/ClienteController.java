@@ -2,6 +2,7 @@ package com.example.demo.Controller;
 
 import com.example.demo.Model.ClienteModel;
 import com.example.demo.Service.ClienteService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -10,11 +11,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/cliente")
 public class ClienteController {
 
-    private final ClienteService clienteService;
+    @Autowired
+    private  ClienteService clienteService;
 
-    public ClienteController(ClienteService clienteService) {
-        this.clienteService = clienteService;
-    }
 
     // 🔹 Muestra el formulario de registro (Corregí el nombre de la vista)
     @GetMapping("/registro")

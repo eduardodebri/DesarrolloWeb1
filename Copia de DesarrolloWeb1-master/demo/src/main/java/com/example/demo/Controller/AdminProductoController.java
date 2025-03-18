@@ -4,6 +4,7 @@ import com.example.demo.Model.AdicionalesModel;
 import com.example.demo.Model.ProductoModel;
 import com.example.demo.Service.AdicionalesService;
 import com.example.demo.Service.ProductoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -14,13 +15,11 @@ import java.util.List;
 @RequestMapping("/admin/productos")
 public class AdminProductoController {
 
-    private final ProductoService productoService;
-    private final AdicionalesService adicionalesService;
+    @Autowired
+    private  ProductoService productoService;
+    @Autowired
+    private  AdicionalesService adicionalesService;
 
-    public AdminProductoController(ProductoService productoService, AdicionalesService adicionalesService) {
-        this.productoService = productoService;
-        this.adicionalesService = adicionalesService;
-    }
 
     // LISTAR TODOS LOS PRODUCTOS
     @GetMapping("/")
@@ -39,16 +38,26 @@ public class AdminProductoController {
         return "agregarProducto";
     }
 
-    // GUARDAR UN NUEVO PRODUCTO
     @PostMapping("/guardar")
     public String guardarProducto(@ModelAttribute ProductoModel producto, @RequestParam(required = false) List<Long> adicionalesSeleccionados) {
-        if (adicionalesSeleccionados != null && !adicionalesSeleccionados.isEmpty()) {
-            List<AdicionalesModel> adicionales = adicionalesService.obtenerAdicionales();
-            producto.setAdicionales(adicionales);
+         // Si es una actualización
+            ProductoModel productoExistente = productoService.obtenerProductoPorId((long) producto.getId());
+
+            if (productoExistente != null) {
+                // Si el usuario no envió adicionales, mantenemos los anteriores
+                if (adicionalesSeleccionados == null || adicionalesSeleccionados.isEmpty()) {
+                    producto.setAdicionales(productoExistente.getAdicionales());
+                } else {
+                    List<AdicionalesModel> nuevosAdicionales = adicionalesService.obtenerAdicionalesPorIds(adicionalesSeleccionados);
+                    producto.setAdicionales(nuevosAdicionales);
+                }
+
         }
+
         productoService.agregarProducto(producto);
         return "redirect:/admin/productos/";
     }
+
 
     // MOSTRAR FORMULARIO PARA EDITAR UN PRODUCTO
     @GetMapping("/editar/{id}")

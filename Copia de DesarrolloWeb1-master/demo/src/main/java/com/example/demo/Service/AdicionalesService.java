@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class AdicionalesService {
+public class AdicionalesService implements AdicionalesServiceInterface {
 
     private final AdicionalesRepository adicionalesRepository;
     private final ProductoService productoService;
@@ -41,6 +41,9 @@ public class AdicionalesService {
         adicionalesRepository.deleteById(id);
     }
 
+    public List<AdicionalesModel> obtenerAdicionalesPorIds(List<Long> ids) {
+        return adicionalesRepository.findAllById(ids);
+    }
     
     }
 

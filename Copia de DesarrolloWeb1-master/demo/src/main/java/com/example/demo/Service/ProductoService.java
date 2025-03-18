@@ -7,13 +7,13 @@ import java.util.Optional;
 import com.example.demo.Model.AdicionalesModel;
 import com.example.demo.Repository.AdicionalesRepository;
 import jakarta.annotation.PostConstruct;
-import org.springframework.stereotype.Repository;
 
 import com.example.demo.Model.ProductoModel;
 import com.example.demo.Repository.ProductoRepository;
+import org.springframework.stereotype.Service;
 
-@Repository
-public class ProductoService {
+@Service
+public class ProductoService implements ProductosServiceInterface {
 
     private final ProductoRepository productoRepository;
     private final AdicionalesRepository adicionalesRepository;

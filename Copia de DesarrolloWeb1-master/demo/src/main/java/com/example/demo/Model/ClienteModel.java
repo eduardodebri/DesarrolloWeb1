@@ -6,8 +6,8 @@ import lombok.*;
 
 @Entity
 @Table(name = "clientes")
-@Getter
-@Setter
+@Data
+@NoArgsConstructor
 public class ClienteModel {
 
     @Id
@@ -32,7 +32,7 @@ public class ClienteModel {
     @Column(nullable = false)
     private String direccion;
 
-    public ClienteModel() {}
+
 
     public ClienteModel(String nombre, String apellido, String email, String contraseña, String telefono, String direccion) {
         this.nombre = nombre;
