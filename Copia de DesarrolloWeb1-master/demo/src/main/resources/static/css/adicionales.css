@@ -38,6 +38,8 @@ header {
 }
 
 .header-container h1 {
+    flex: 1; /* Ensure the title stays to the left */
+    text-align: left;
     color: white;
     font-size: 28px;
 }
@@ -46,9 +48,9 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Ensure alignment to the right */
     flex-wrap: wrap;
-    width: 70%;
+    width: auto; /* Ensure width is auto */
 }
 
 /* --- MENÚ DE NAVEGACIÓN --- */
@@ -68,7 +70,7 @@ header {
 }
 
 .nav-links a:hover {
-    background: #ffffff;
+    background: gold;
     color: black;
 }
 
@@ -94,6 +96,7 @@ header {
     background-color: transparent;
     color: white;
     border: 2px solid red;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .logout-btn:hover {

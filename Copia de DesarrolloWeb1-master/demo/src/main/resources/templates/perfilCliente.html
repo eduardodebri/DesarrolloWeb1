@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perfil del Cliente</title>
-  <link rel="stylesheet" th:href="@{/css/cliente.css}">
-</head>
-<body>
+  <html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Cliente</title>
+    <link rel="stylesheet" th:href="@{/css/cliente.css}">
+  </head>
+  <body>
 
-<!-- HEADER con saludo al cliente -->
-<header>
-  <h1>Hola, <span th:text="${cliente.nombre}"></span> 👋</h1>
-</header>
+  <!-- HEADER con menú de navegación -->
+  <header>
+    <div class="greeting">
+      <h1>Hola, <span th:text="${cliente.nombre}"></span> 👋</h1>
+    </div>
+    <nav class="header-container">
+      <a th:href="@{/inicio}">Inicio</a>
+      <a th:href="@{/pedidos}">Mis Pedidos</a>
+      <a th:href="@{/logout}" class="logout">Cerrar Sesión</a>
+    </nav>
+  </header>
 
-<!-- CONTENEDOR DEL PERFIL -->
-<div class="perfil-container">
-  <h2>Datos Personales</h2>
-  <p><strong>Nombre:</strong> <span th:text="${cliente.nombre}"></span></p>
-  <p><strong>Apellido:</strong> <span th:text="${cliente.apellido}"></span></p>
-  <p><strong>Email:</strong> <span th:text="${cliente.email}"></span></p>
-  <p><strong>Teléfono:</strong> <span th:text="${cliente.telefono}"></span></p>
-  <p><strong>Dirección:</strong> <span th:text="${cliente.direccion}"></span></p>
+  <!-- CONTENEDOR DEL PERFIL -->
+  <div class="perfil-container">
+    <h2>Datos Personales</h2>
+    <p><strong>Nombre:</strong> <span th:text="${cliente.nombre}"></span></p>
+    <p><strong>Apellido:</strong> <span th:text="${cliente.apellido}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${cliente.email}"></span></p>
+    <p><strong>Teléfono:</strong> <span th:text="${cliente.telefono}"></span></p>
+    <p><strong>Dirección:</strong> <span th:text="${cliente.direccion}"></span></p>
 
-  <a th:href="@{/cliente/editar/{id}(id=${cliente.id})}" class="btn">Editar Perfil</a>
-  <a th:href="@{/cliente/eliminar/{id}(id=${cliente.id})}" class="btn eliminar" onclick="return confirm('¿Seguro que deseas eliminar tu cuenta?');">Eliminar Cuenta</a>
-</div>
+    <div class="btn-group">
+      <a th:href="@{/cliente/editar/{id}(id=${cliente.id})}" class="btn">✏️ Editar Perfil</a>
+      <a th:href="@{/cliente/eliminar/{id}(id=${cliente.id})}" class="btn eliminar" 
+        onclick="return confirm('¿Seguro que deseas eliminar tu cuenta?');">🗑️ Eliminar Cuenta</a>
+    </div>
+  </div>
 
-<!-- SECCIÓN HISTORIAL DE PEDIDOS (VACÍA POR AHORA) -->
-<div class="historial-container">
-  <h2>Historial de Pedidos</h2>
-  <p>Aún no tienes pedidos registrados.</p>
-</div>
+  <!-- SECCIÓN HISTORIAL DE PEDIDOS -->
+  <div class="historial-container">
+    <h2>Historial de Pedidos</h2>
+    <p>Aún no tienes pedidos registrados.</p>
+  </div>
 
-</body>
-</html>
+  </body>
+  </html>

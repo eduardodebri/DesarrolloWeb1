@@ -47,8 +47,8 @@ header {
 }
 
 .header-container nav {
-    position: static; /* Cambiado a static */
-    margin-left: auto; /* Añadido para empujar el nav a la derecha */
+    position: static; 
+    margin-left: auto; 
 }
 
 /* --- BOTÓN VOLVER --- */
