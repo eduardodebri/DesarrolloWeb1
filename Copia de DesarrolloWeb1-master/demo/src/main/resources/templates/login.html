@@ -21,6 +21,7 @@
     </a>
     <h1>Bienvenido</h1>
     <p>Ingrese sus credenciales de administrador</p>
+    <p th:if="${error}" th:text="${error}" class="error-message"></p>
 
     <form th:action="@{/cliente/login}" method="post">
     <label for="email">Correo</label>

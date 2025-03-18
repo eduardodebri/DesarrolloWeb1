@@ -30,29 +30,30 @@ header {
 }
 
 .header-container {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: black;
-    padding: 15px 5%; /* Ajustado el padding */
-    width: 90%; /* Aumentado el tamaño del contenedor */
-    margin: 0 auto; /* Centrado el contenedor */
+    padding: 15px 40px;
 }
 
 .header-container h1 {
     color: white;
     font-size: 28px;
-    margin: 0;
 }
 
-.header-container nav {
-    position: static; 
-    margin-left: auto; 
+/* --- MENÚ DE NAVEGACIÓN --- */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: auto;
 }
 
-/* --- BOTÓN VOLVER --- */
-.header-btn {
+/* --- BOTONES DEL ENCABEZADO --- */
+.admin-menu-btn, .header-btn, .logout-btn {
     background-color: transparent;
     color: white;
     padding: 8px 12px;
@@ -63,48 +64,75 @@ header {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-.header-btn:hover {
+.header-btn:hover, .admin-menu-btn:hover {
     background: gold;
     color: black;
 }
 
-/* --- MENÚ DE NAVEGACIÓN --- */
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.nav-links a {
+/* --- BOTÓN DE CERRAR SESIÓN --- */
+.logout-btn {
+    background-color: transparent;
     color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    border: 2px solid red;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-.nav-links a:hover {
-    background: #ffffff;
-    color: black;
+.logout-btn:hover {
+    background-color: red;
+    color: white;
 }
 
-/* --- CONTENEDOR PRINCIPAL --- */
-.container {
-    width: 80%;
-    margin: 20px auto;
-    text-align: center;
-    background: white;
+/* --- FORMULARIO DE EDICIÓN --- */
+.edit-container {
+    width: 50%;
+    margin: 40px auto;
     padding: 20px;
+    background: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* --- FOOTER --- */
-footer {
-    margin-top: auto;
-    padding: 15px;
-    background-color: black;
-    color: white;
-    font-size: 14px;
+.edit-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* --- BOTÓN DE GUARDAR --- */
+.save-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid gold;
+    background: transparent;
+    color: black;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.save-btn:hover {
+    background: gold;
+    color: black;
 }

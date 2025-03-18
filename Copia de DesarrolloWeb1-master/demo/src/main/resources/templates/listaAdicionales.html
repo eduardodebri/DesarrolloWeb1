@@ -30,7 +30,6 @@
     <table>
         <thead>
         <tr>
-            <th>ID</th>
             <th>Nombre</th>
             <th>Precio</th>
             <th>Acciones</th>
@@ -38,7 +37,6 @@
         </thead>
         <tbody>
         <tr th:each="adicional : ${adicionales}">
-            <td th:text="${adicional.id}"></td>
             <td th:text="${adicional.nombre}"></td>
             <td th:text="'$' + ${adicional.precio} + ' COP'"></td>
             <td>

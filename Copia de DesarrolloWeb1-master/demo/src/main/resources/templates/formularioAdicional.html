@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Añadir Adicionales</title>
-    <link rel="stylesheet" th:href="@{/css/stylesAnadirAdicionales.css}">
+    <title>Añadir Adicional</title>
+    <link rel="stylesheet" th:href="@{/css/stylesAnadirAdicionales.css}"> 
 </head>
 <body>
 
 <header>
     <div class="header-container">
-        <h1>Panel Añadir Adicionales</h1>
-        <nav>
-            <a href="/admin/adicionales/" class="header-btn">Volver</a>
-        </nav>
+        <h1>ADMINISTRAR ADICIONALES</h1>
+        <div class="header-buttons">
+            <a th:href="@{/admin}" class="admin-menu-btn">Menú Admin</a>
+            <a th:href="@{/estadisticas}" class="header-btn">Estadísticas</a>
+            <a th:href="@{/domiciliarios}" class="header-btn">Domiciliarios</a>
+            <a th:href="@{/operadores}" class="header-btn">Operadores</a>
+            <a th:href="@{/productos}" class="header-btn">Productos</a>
+            <a th:href="@{/logout}" class="logout-btn">Cerrar Sesión</a>
+        </div>
     </div>
 </header>
 
-<main class="container">
-    <form th:action="@{/admin/adicionales/guardar}" th:object="${adicional}" method="post">
+<section class="edit-container">
+    <h2>Añadir Nuevo Adicional</h2>
+    <form th:action="@{/admin/adicionales/guardar}" method="post" th:object="${adicional}">
         <input type="hidden" th:field="*{id}">
 
         <label>Nombre:</label>
@@ -27,9 +33,9 @@
         <label>Precio:</label>
         <input type="number" th:field="*{precio}" step="0.01" required>
 
-        <button type="submit" class="add-product-btn">Guardar</button>
+        <button type="submit" class="save-btn">Guardar</button>
     </form>
-</main>
+</section>
 
 </body>
 </html>
