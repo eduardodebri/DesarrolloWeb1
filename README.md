@@ -1,11 +1,11 @@
 **Restaurante Japonés - Proyecto** <br>
 **Integrantes:** <br> 
-Eduardo De Brigard Carreño
-Juan Romero Plata
+Eduardo De Brigard Carreño, 
+Juan Romero Plata, 
 Edward Quitero Palma <br>
 Este proyecto consiste en una plataforma web para un restaurante japonés. Los usuarios pueden explorar un sinfín de productos personalizables para su experiencia culinaria. Además, los empleados tienen acceso a un portal exclusivo para gestionar de manera eficiente las actividades del restaurante.
 
-**Tecnologías Utilizadas**
+**Tecnologías Utilizadas** <br>
 Frontend: HTML, CSS<br>
 Backend: Spring Boot<br>
 Base de Datos: H2 <br>
