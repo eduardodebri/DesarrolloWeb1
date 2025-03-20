@@ -19,7 +19,7 @@ public class ProductoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @Column(nullable = false)
     private String nombre;
     @Column(nullable = false)
@@ -28,7 +28,7 @@ public class ProductoModel {
     private String descripcion;
     @Column(nullable = false)
     private String imagenUrl;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "producto_adicional",
             joinColumns = @JoinColumn(name = "producto_id"),
