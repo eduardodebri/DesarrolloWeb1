@@ -20,6 +20,6 @@ Tipo de Letra
 El tipo de letra utilizado en el diseño es Poltowski Nowy, que aporta una apariencia elegante y moderna al sitio web. Asegúrate de incluir este tipo de letra en el archivo CSS.
 
 a continuación exponemos los diagramas usados para el desarrollo de la pagina de nuestro restaurante:
-![Diagrama](Images/diagramaEntidad.jpeg)
+<img src="Images/diagramaEntidad.jpeg" alt="Diagrama Entidad Relación" width="300" height = "300">
 
 
