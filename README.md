@@ -19,4 +19,7 @@ Dorado: #FFD700 (para resaltar elementos clave y detalles)
 Tipo de Letra
 El tipo de letra utilizado en el diseño es Poltowski Nowy, que aporta una apariencia elegante y moderna al sitio web. Asegúrate de incluir este tipo de letra en el archivo CSS.
 
+a continuación exponemos los diagramas usados para el desarrollo de la pagina de nuestro restaurante:
+(Images/diagrama_entidadRealción_hanami.jpeg)
+
 
