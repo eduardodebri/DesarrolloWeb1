@@ -74,12 +74,12 @@ public class DataBaseInit {
                     new ProductoModel("Ramune Soda", 14000, "Refresco japonés con botella de canica.", "futomaki.jpeg")
             );
             productoRepository.saveAll(productos);
-
-
+            
+            
 
             System.out.println("🚀 Base de datos inicializada correctamente con productos y adicionales.");
         } else {
-            System.out.println("⚠️ La base de datos ya contiene datos, no se inicializó nuevamente.");
+            System.out.println("⚠ La base de datos ya contiene datos, no se inicializó nuevamente.");
         }
     }
 
