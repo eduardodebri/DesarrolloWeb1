@@ -2,7 +2,7 @@
 **Integrantes:** <br> 
 Eduardo De Brigard Carreño, 
 Juan Romero Plata, 
-Edward Quitero Palma <br><br>
+Edward Quintero Palma <br><br>
 Este proyecto consiste en una plataforma web para un restaurante japonés. Los usuarios pueden explorar un sinfín de productos personalizables para su experiencia culinaria. Además, los empleados tienen acceso a un portal exclusivo para gestionar de manera eficiente las actividades del restaurante.
 
 **Tecnologías Utilizadas** <br>
