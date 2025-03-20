@@ -32,7 +32,7 @@ a continuación exponemos los diagramas usados para el desarrollo de la pagina d
 
 **Diagrama de Clases:** <br>
 <p align="center">
-  <img src="Images/diagramaDeClasesHanami.jpeg" alt="Diagrama de Clases" width="300" height = "300">
+  <img src="Images/diagramaDeClasesHanami.jpeg" alt="Diagrama de Clases" width="400" height = "300">
 </p><br>
 
 
