@@ -50,59 +50,38 @@ nav a:hover {
     color: black;
 }
 
-/* --- BOTÓN DE CERRAR SESIÓN --- */
-.logout-btn {
-    background-color: transparent;
-    color: white;
-    border: 2px solid red;
-}
-
-.logout-btn:hover {
-    background-color: red;
-    color: white;
-}
-
-/* --- CONTENEDOR PRINCIPAL (SPLIT SCREEN) --- */
-.split-screen {
-    display: flex;
-    width: 90%;
-    max-width: 1200px;
-    margin-top: 20px;
-    height: auto;
-    transition: width 0.3s ease-in-out;
-}
-
-.split-screen .form-container {
-    width: calc(100% - 50px); /* Adjust width when panel is collapsed */
-}
-
-.split-screen .additional-panel.collapsed + .form-container {
-    width: 100%; /* Full width when panel is collapsed */
-}
-
-/* --- FORMULARIO DE PRODUCTO (IZQUIERDA) --- */
-.form-container {
+/* --- CONTENEDOR PRINCIPAL --- */
+.form-wrapper {
     background: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    transition: width 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin-top: 20px;
 }
 
-.form-container.full-width {
+/* --- FORMULARIO PRODUCTO Y ADICIONALES EN LÍNEA --- */
+.product-form {
+    display: flex;
+    gap: 30px;
     width: 100%;
+    justify-content: space-between;
+}
+
+/* --- FORMULARIO PRINCIPAL --- */
+.form-container {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
 }
 
 h2 {
     text-align: center;
     color: black;
     font-family: "Bebas Neue", cursive;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
 }
 
 label {
@@ -118,7 +97,7 @@ input, textarea {
     width: 100%;
 }
 
-/* --- BOTONES (Mismo estilo que antes) --- */
+/* --- BOTÓN AÑADIR --- */
 button {
     background-color: black;
     color: white;
@@ -129,6 +108,7 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+    margin-top: 15px;
 }
 
 button:hover {
@@ -136,130 +116,48 @@ button:hover {
     color: black;
 }
 
-/* --- PANEL DE ADICIONALES (DERECHA) --- */
-.additional-panel {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transition: width 0.3s ease-in-out;
-}
-
-/* --- ESTILO CUANDO ESTÁ COLAPSADO --- */
-.additional-panel.collapsed {
-    width: 0; /* Collapse to zero width */
-    padding: 0; /* Remove padding */
-}
-
-/* --- BOTÓN DESPLEGABLE (BARRA PEGADA A LA DERECHA) --- */
-.toggle-btn {
-    position: absolute;
-    right: -50px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 50px;
-    background: black;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    transition: right 0.3s ease-in-out;
-}
-
-.toggle-btn:hover {
-    background: gold; /* Hover effect */
-    color: black;
-}
-
-.toggle-btn img {
-    width: 30px;
-}
-
-/* --- CONTENIDO DEL PANEL DE ADICIONALES --- */
-.additional-content {
+/* --- PANEL DE ADICIONALES --- */
+.additional-container {
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    width: 100%;
-}
-
-.additional-content h2 {
-    margin-bottom: 10px;
-}
-
-.additional-content form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 .adicionales-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 20px;
+    width: 100%;
 }
 
 .adicional-item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
 }
 
-.adicional-item input[type="checkbox"] {
+.adicional-item input {
     width: 20px;
     height: 20px;
 }
 
-.adicional-item label {
-    font-size: 16px;
-    color: #333;
-}
-
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 1024px) {
-    .split-screen {
+    .form-wrapper {
+        width: 90%;
+    }
+
+    .product-form {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container, .additional-container {
         width: 100%;
-    }
-
-    .form-container {
-        width: 100%;
-    }
-
-    .additional-panel {
-        width: 100%;
-        height: 60px;
-    }
-
-    .additional-panel.collapsed {
-        height: 60px;
-        width: 100%;
-    }
-
-    .toggle-btn {
-        right: 0;
-        height: 60px;
-        width: 50px;
-    }
-
-    .additional-panel.collapsed .toggle-btn {
-        right: 0; /* Move to the right when collapsed */
-    }
-
-    .additional-content {
-        display: none;
-    }
-
-    .additional-panel:not(.collapsed) .additional-content {
-        display: flex;
     }
 }
