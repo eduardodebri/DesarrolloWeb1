@@ -1,4 +1,4 @@
-**Restaurante Japonés - Proyecto** <br>
+**Restaurante Japonés - Proyecto (Hanami)** <br>
 **Integrantes:** <br> 
 Eduardo De Brigard Carreño, 
 Juan Romero Plata, 
@@ -30,7 +30,7 @@ a continuación exponemos los diagramas usados para el desarrollo de la pagina d
   <img src="Images/diagramaEntidad.jpeg" alt="Diagrama Entidad Relación" width="300" height = "300">
 </p><br>
 
-**Diagrama de clases** <br>
+**Diagrama de Clases:** <br>
 <p align="center">
   <img src="Images/diagramaEntidad.jpeg" alt="Diagrama de Clases" width="300" height = "300">
 </p><br>
