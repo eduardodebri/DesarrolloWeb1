@@ -1,0 +1,60 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 0px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+}
+
+#rosaLogo{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    top: 7px;
+}
+
+#nombreLogo{
+    position: relative;
+    width: 100px;
+    height: 70px;
+    right: 480px;
+    top: 7px;
+}
+
+.linksHeader {
+    font-family: "Poltawski Nowy";
+    font-style: italic;
+    color: white;
+    max-width: 0 15px;
+    text-decoration: none;
+    margin-right: 30px;
+    position: relative;
+    right: 70px;
+    cursor: pointer;
+}
+
+.linksHeader:hover {
+    color: gold;
+}
+.menu-button {
+    font-family: "Poltawski Nowy";
+    font-style: italic;
+    padding: 3px 12px;
+    margin-top: 1em;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    right: 50px;
+    text-decoration: none;
+}
+
+.menu-button:hover {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}

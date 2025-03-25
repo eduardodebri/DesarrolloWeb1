@@ -1,0 +1,18 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lily+Script+One&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <img id="rosaLogo" src="assets/Images/rosaLogo.png" alt="rosaLogo">
+        <a routerLink="/hanami"><img id="nombreLogo" src="assets/Images/nombreLogo.png" alt="nombrelogo"></a>
+        <nav class="nav-links">
+            <a class="linksHeader" th:href="@{/cliente/login}">Iniciar Sesion</a>
+            <a class="linksHeader" th:href="@{#bienvenidaContainer}">Acerca de</a>
+            <a class="linksHeader" th:href="@{#contactos}">Contacto</a>
+            <a th:href="@{/hanami/productos/}" class="menu-button">Menú</a>
+        </nav>
+    </div>
+</header>
+

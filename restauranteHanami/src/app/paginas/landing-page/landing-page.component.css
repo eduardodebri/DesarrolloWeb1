@@ -1,0 +1,336 @@
+
+#logoRestaurante{
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 120px;
+    left: 616px;
+    z-index: 3;
+
+}
+
+.parrafoBienvenida{
+    font-family: "Poltawski Nowy";
+    font-style: italic;
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    font-size: 20px;
+    color: white;
+    top: 60px;
+    z-index: 3;
+}
+
+#linea1{
+    position: absolute;
+    height: 1px;
+    width: 40px;
+    background-color: gold;
+    top: 500px;
+    left: 600px;
+    z-index: 3;
+}
+#linea2{
+    position: absolute;
+    height: 1px;
+    width: 40px;
+    background-color: gold;
+    top: 500px;
+    left: 900px;
+    z-index: 3;
+}
+
+#tituloRestaurante{
+    font-size: 40px;
+    font-family: "Poltawski Nowy";
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 3;
+}
+
+
+.typografia {
+    margin: 0;
+    font-family: "Lily Script One";
+    font-size: 100px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: gold;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    z-index: 1;
+}
+
+
+section {
+    padding: 2em;
+}
+
+#inicio {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border-radius: 50px;
+    position: relative;
+    top: 70px;
+}
+
+#sombraInicio{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    top: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    z-index: 2;
+}
+
+
+/* Botón con estilo uniforme */
+.menu-button {
+    font-family: "Poltawski Nowy";
+    font-style: italic;
+    padding: 3px 12px;
+    margin-top: 1em;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    right: 50px;
+    text-decoration: none;
+}
+
+#titulo_acerca_de{
+    font-family: "Poltawski Nowy";
+    font-style: italic;
+    font-size: 15px;
+    color: gold;
+    position: relative;
+    top: 120px;
+    left: 50px;
+    z-index: 3;
+}
+
+#bienvenidaContainer{
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    background-color: black;
+    width: 100%;
+    height: 700px;
+}
+
+#contenedorDescripcion{
+    position: relative;
+    top: 90px;
+    font-family: "Poltawski Nowy";
+    font-style: italic;
+    font-size: 17px;
+    padding: 25px;
+    position: relative;
+    text-align: justify;
+    color: white;
+    background-color: black;
+    width: 700px;
+    height: 650px;
+
+}
+
+#botonConoceMas{
+    font-family: "Poltawski Nowy";
+    font-size: 15px;
+    font-style: italic;
+    padding: 3px 14px;
+    margin-top: 1em;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 30px;
+    position: absolute;
+    top: 610px;
+    left: 30px;
+}
+
+#botonConoceMas:hover{
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+#sushi1{
+    position: absolute;
+    border-radius: 15px;
+    top: 200px;
+    left: 840px;
+    width: 350px;
+    height: 350px;
+    z-index: 3;
+}
+
+#sushi2{
+    position: absolute;
+    border-radius: 15px;
+    left: 1100px;
+    top: 80px;
+    width: 350px;
+    height: 350px;
+    z-index: 2;
+}
+
+#menu{
+    position: relative;
+    width: 100%;
+    height: 900px;
+    background-color: white;
+}
+#tituloMenu{
+    font-family: "Lily Script One";
+    font-weight: normal;
+    position: absolute;
+    left: 620px;
+    top: 0;
+    font-size: 50px;
+}
+
+#linea3{
+    position: absolute;
+    height: 1px;
+    width: 40px;
+    background-color: black;
+    top: 80px;
+    left: 550px;
+    z-index: 3;
+}
+#linea4{
+    position: absolute;
+    height: 1px;
+    width: 40px;
+    background-color: black;
+    top: 80px;
+    left: 950px;
+    z-index: 3;
+}
+
+#fondoPlatos{
+    position: relative;
+    background-color: black;
+    width: 1100px;
+    height: 515px;
+    top: 170px;
+    left: 160px;
+    border-radius: 30px;
+}
+
+#plato1{
+
+    position: absolute;
+    background-color: black;
+    width: 400px;
+    height: 150px;
+    left: 55px;
+}
+#plato2{
+    position: absolute;
+    background-color: black;
+    width: 400px;
+    height: 150px;
+    left: 700px;
+
+}
+#plato3{
+    position: absolute;
+    background-color: black;
+    width: 400px;
+    height: 150px;
+    top: 210px;
+    left: 55px;
+}
+#plato4{
+    position: absolute;
+    background-color: black;
+    width: 400px;
+    height: 150px;
+    top: 210px;
+    left: 700px;
+}
+#plato5{
+    position: absolute;
+    background-color: black;
+    width: 400px;
+    height: 150px;
+    top: 390px;
+    left: 55px;
+}
+#plato6{
+    position: absolute;
+    background-color: black;
+    width: 400px;
+    height: 150px;
+    top: 390px;
+    left: 700px;
+}
+
+.imagenPlatos{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+}
+
+.nombrePlatos{
+    margin: 0;
+    display: inline;
+    position: absolute;
+    font-family: "Poltawski Nowy";
+    font-size: 35px;
+    color: white;
+    left: 180px;
+    top: 10px;
+}
+
+.precioPlatos{
+    margin: 0;
+    display: inline;
+    position: absolute;
+    font-family: "Poltawski Nowy";
+    font-style: italic;
+    font-size: 19px;
+    letter-spacing: 1px;
+    color: gold;
+    left: 180px;
+    top: 80px;
+}
+
+#botonExploraMenu{
+    font-family: "Poltawski Nowy";
+    font-style: italic;
+    font-size: 17px;
+    border-radius: 10px;
+    padding: 3px 20px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: 850px;
+    left: 677px;
+}
+
+#botonExploraMenu:hover{
+    cursor: pointer;
+    background-color: gold;
+    border-color: gold;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.7);
+}
