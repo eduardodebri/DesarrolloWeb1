@@ -1,0 +1,138 @@
+/* --- ESTILO GENERAL --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Poltawski Nowy", sans-serif;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex-grow: 1;
+}
+
+/* --- ENCABEZADO --- */
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 15px 40px;
+}
+
+.header-container h1 {
+    color: white;
+    font-size: 28px;
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+/* --- BOTONES DEL ENCABEZADO --- */
+.admin-menu-btn, .header-btn, .logout-btn {
+    background-color: transparent;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.header-btn:hover, .admin-menu-btn:hover {
+    background: gold;
+    color: black;
+}
+
+/* --- BOTÓN DE CERRAR SESIÓN --- */
+.logout-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid red;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+/* --- FORMULARIO DE EDICIÓN --- */
+.edit-container {
+    width: 50%;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* --- BOTÓN DE GUARDAR --- */
+.save-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid gold;
+    background: transparent;
+    color: black;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.save-btn:hover {
+    background: gold;
+    color: black;
+}

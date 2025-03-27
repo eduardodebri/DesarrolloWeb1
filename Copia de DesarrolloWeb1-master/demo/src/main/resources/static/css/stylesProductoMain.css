@@ -1,0 +1,140 @@
+/* 🔹 RESET GENERAL */
+body {
+    font-family: "Poltawski Nowy", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+/* 🔹 HEADER */
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+/* 🔹 BOTÓN MENÚ ADMIN ARRIBA A LA DERECHA */
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.admin-menu-btn {
+    background-color: gold;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.admin-menu-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* 🔹 SECCIÓN PRINCIPAL */
+.product-list {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.product-list h2 {
+    text-align: center;
+}
+
+/* 🔹 TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* 🔹 ESTILO INTERCALADO DE FILAS */
+table thead {
+    background-color: black;
+    color: white;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.even-row {
+    background-color: white;
+}
+
+.odd-row {
+    background-color: #f0f0f0;
+}
+
+/* 🔹 IMAGENES EN LA TABLA */
+.product-img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* 🔹 BOTONES DE ACCIÓN */
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.edit-btn {
+    background: gold;
+    color: black;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: black;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+
+.add-product-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px 0 0 auto;
+    padding: 8px 15px;
+    background-color: gold;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.add-product-btn:hover {
+    background-color: black;
+    color: white;
+}

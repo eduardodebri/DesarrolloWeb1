@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Perfil</title>
+  <link rel="stylesheet" th:href="@{/css/cliente.css}">
+</head>
+<body>
+<header>
+  <h1>Editar Perfil</h1>
+</header>
+
+<form th:action="@{/cliente/editar}" th:object="${cliente}" method="post">
+  <input type="hidden" th:field="*{id}">
+
+  <label>Nombre:</label>
+  <input type="text" th:field="*{nombre}" required>
+
+  <label>Apellido:</label>
+  <input type="text" th:field="*{apellido}" required>
+
+  <label>Email:</label>
+  <input type="email" th:field="*{email}" required>
+
+  <label>Contraseña:</label>
+  <input type="text" th:field="*{contrasena}" required>
+
+  <label>Teléfono:</label>
+  <input type="text" th:field="*{telefono}" required>
+
+  <label>Dirección:</label>
+  <input type="text" th:field="*{direccion}" required>
+
+  <button type="submit">Guardar Cambios</button>
+</form>
+
+<a th:href="@{/cliente/perfil/{id}(id=${cliente.id})}">Cancelar</a>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Hanami</title>
+    <link rel="stylesheet" th:href="@{/css/stylesLogOn.css}">
+    <script defer th:src="@{/js/scriptLogOn.js}"></script>
+</head>
+<body>
+<div class="login-wrapper">
+    <div class="login-image">
+        <img th:src="@{/images/fondoLogIn.png}" alt="Imagen de Registro">
+        <div class="logo-overlay">
+            <img th:src="@{/images/hanamiLogo.png}" alt="Logo Hanami">
+        </div>
+    </div>
+    <div class="login-container">
+        <a th:href="@{/menu}" class="volver-btn-container">
+            <img th:src="@{/images/volver.png}" alt="Volver">
+            <span>Volver al restaurante</span>
+        </a>
+        <h1>Crear Cuenta</h1>
+        <p>Regístrese para acceder al sistema</p>
+
+        <form th:action="@{/cliente/registro}" method="post" th:object="${cliente}">
+        <label >Nombre</label>
+            <input type="text"  th:field="*{nombre}" placeholder="Ingrese su usuario" required>
+
+            <label >Apellido</label>
+            <input type="text"  th:field="*{apellido}" placeholder="Ingrese su usuario" required>
+
+            <label for=>Correo</label>
+            <input type="email"  th:field="*{email}" placeholder="correo@correo.com" required>
+
+            <label >Contraseña</label>
+            <input type="password"  th:field="*{contrasena}" placeholder="********" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" th:field="*{telefono}" placeholder="+12 34567890" required>
+
+            <label >Direccion de entrega</label>
+            <input type="text"  th:field="*{direccion}" placeholder="calle a #1-2" required>
+
+
+            <button type="submit">Registrarse</button>
+        </form>
+
+        <a th:href="@{/login}" class="crear-cuenta">¿Ya tienes cuenta? Inicia sesión</a>
+    </div>
+</div>
+</body>
+</html>

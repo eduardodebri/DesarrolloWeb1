@@ -1,0 +1,118 @@
+/* 🔹 RESET GENERAL */
+body {
+    font-family: "Poltawski Nowy", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+/* 🔹 HEADER */
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+/* 🔹 BOTONES EN EL HEADER */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.admin-menu-btn, .header-btn, .logout-btn {
+    background-color: gold;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.header-btn:hover, .admin-menu-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* 🔹 BOTÓN CERRAR SESIÓN DIFERENTE */
+.logout-btn {
+    background-color: red;
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: darkred;
+}
+
+/* 🔹 SECCIÓN PRINCIPAL */
+.operator-list {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* 🔹 TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table thead {
+    background-color: black;
+    color: white;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.even-row {
+    background-color: white;
+}
+
+.odd-row {
+    background-color: #f0f0f0;
+}
+
+/* 🔹 BOTÓN AÑADIR OPERADOR */
+.add-operator-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.add-operator-btn {
+    padding: 8px 15px;
+    background-color: gold;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.add-operator-btn:hover {
+    background-color: black;
+    color: white;
+}
